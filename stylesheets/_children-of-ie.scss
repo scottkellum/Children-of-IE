@@ -1,0 +1,7 @@
+@function nth-child($n) {
+  $nth-child: first-child;
+  @for $i from 2 through $n {
+    $nth-child: append($nth-child, #{"+ *"});
+  }
+  @return #{":"}$nth-child;
+}
