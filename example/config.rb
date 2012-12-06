@@ -6,10 +6,11 @@ http_path = 'html'
 css_dir = 'css'
 sass_dir = 'sass'
 
-# module Sass::Script::Functions
-#   def remove_nth(string)
-#     rm = "n"
-#     result = string.delete(rm)
-#     Sass::Script::Number.new(result)
-#   end
-# end
+module Sass::Script::Functions
+  def remove_nth(input)
+    n = "n"
+    b = ""
+    result = input.value.gsub(n, b)
+    Sass::Script::String.new(result)
+  end
+end

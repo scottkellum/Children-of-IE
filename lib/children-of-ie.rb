@@ -10,8 +10,10 @@ end
 
 # Sass script
 module Sass::Script::Functions
-  def rmnthstring(string)
-    result = "5" 
-    Sass::Script::Number.new(result)
+  def remove_nth(needle)
+    n = "n"
+    b = ""
+    result = needle.value.gsub(n, b)
+    Sass::Script::String.new(result)
   end
 end

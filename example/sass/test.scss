@@ -6,14 +6,14 @@ body > div {
 }
 
 .nth {
-  li:nth-child(n+5) {
+  li:nth-child(5) {
     color: red;
     background-color: #ffc;
   }
 }
 
 .nth-ie {
-  li#{nth-child(5)} {
+  li#{nth-child(n+5)} {
     color: red;
     background-color: #ffc;
   }
