@@ -7,3 +7,11 @@ module ChildrenOfIe
   DATE = "2011-09-15"
 
 end
+
+# Sass script
+module Sass::Script::Functions
+  def rmnthstring(string)
+    result = "5" 
+    Sass::Script::Number.new(result)
+  end
+end

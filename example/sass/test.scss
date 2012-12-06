@@ -1,3 +1,20 @@
-@import "compass";
 @import "children-of-ie";
 
+body > div {
+  width: 50%;
+  float: left;
+}
+
+.nth {
+  li:nth-child(n+5) {
+    color: red;
+    background-color: #ffc;
+  }
+}
+
+.nth-ie {
+  li#{nth-child(5)} {
+    color: red;
+    background-color: #ffc;
+  }
+}
