@@ -9,10 +9,9 @@
     @return #{":"}$nth-child;
   }
 
-  // If a nth-child string.
+  // If a nth-child string, need to parse the string.
   @else {
-    $n: remove-nth($n);
-    @debug $n + 1;
+    $n: nth(remove-nth($n), 1);
     $nth-child: ();
     @for $i from 2 through $n {
       $nth-child: append($nth-child, #{"~ *"});
