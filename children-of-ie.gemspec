@@ -1,22 +1,27 @@
-# -*- encoding: utf-8 -*-
+require './lib/children-of-ie'
 
 Gem::Specification.new do |s|
-  s.name = %q{children-of-ie}
-  s.version = "0.1.0"
+  # Release information
+  s.version = ChildrenOfIe::VERSION
+  s.date = ChildrenOfIe::DATE
 
-  s.required_rubygems_version = Gem::Requirement.new(">= 1.3.5")
+  # Gem author details
+  s.name = "children-of-ie"
+  s.description = %q{nth-child support for IE 7 and 8}
+  s.summary = %q{nth-child support for IE 7 and 8}
   s.authors = ["Scott Kellum"]
-  s.date = %q{2012-12-16}
-  s.description = %q{nth-child support for IE 7+8}
-  s.email = %w{scott@scottkellum.com}
-  s.has_rdoc = false
-  s.files = Dir.glob("lib/*.*")
+  s.email = ["scott@scottkellum.com"]
+  s.homepage = "https://github.com/scottkellum/children-of-ie"
+
+  # Gem files
+  # These are the files that get distributated in the gem
+  s.files += Dir.glob("lib/**/*.*")
   s.files += Dir.glob("stylesheets/**/*.*")
   s.files += Dir.glob("templates/**/*.*")
-  s.homepage = %q{https://github.com/scottkellum/children-of-ie}
-  s.require_paths = ["lib"]
-  s.rubyforge_project = %q{children-of-ie}
-  s.rubygems_version = %q{0.1.0}
-  s.summary = %q{nth-child support for IE 7+8}
-  s.add_dependency(%q<compass>, ["~> 0.12"])
+
+  # Gem bookkeeping
+  s.required_rubygems_version = ">= 1.3.6"
+  s.rubygems_version = %q{1.3.6}
+  # Adding a dependency for Compass ensures we also install Sass
+  s.add_dependency("compass", [">= 0.12.1"])
 end
