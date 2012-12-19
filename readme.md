@@ -42,6 +42,13 @@ p:nth-child(n+3)    {} // normal nth-child
 p#{nth-child(n+3)}  {} // children-of-ie nth-child
 ```
 
+Children of IE nth requires a selector, if you don’t have one `*` will do just fine.
+
+```scss
+:nth-child(2)       {} // normal nth-child
+*#{nth-child(2)}    {} // children-of-ie nth-child
+```
+
 Other strings are NOT supported.
 
 ```scss

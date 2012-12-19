@@ -6,16 +6,21 @@ body > div {
   float: left;
 }
 
+@mixin highlight {
+  color: red;
+  background-color: #ffc;
+}
+
+// normal nth-child
 .nth {
-  li:nth-child(n+5) {
-    color: red;
-    background-color: #ffc;
+  li:nth-child(3), li:nth-child(n+5) {
+    @include highlight;
   }
 }
 
+// works in IE7 and 8
 .nth-ie {
-  li#{nth-child(n+5)} {
-    color: red;
-    background-color: #ffc;
+  li#{nth-child(3)}, li#{nth-child(n+5)} {
+    @include highlight;
   }
 }
