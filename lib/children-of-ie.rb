@@ -1,3 +1,4 @@
+require 'compass'
 Compass::Frameworks.register("children-of-ie", :path => "#{File.dirname(__FILE__)}/..")
 
 # Sass script string parsing
@@ -12,7 +13,7 @@ end
 
 module ChildrenOfIe
   
-  VERSION = "0.1.0"
-  DATE = "2012-12-16"
+  VERSION = "0.0.1"
+  DATE = "2012-12-12"
 
 end
