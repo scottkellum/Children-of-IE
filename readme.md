@@ -1,8 +1,8 @@
-# Children of the Explorer
+# Children of IE
 
-nth-child for IE 7 and 8.
+Nth-child is annoyingly not supported by Internet Explorer 8 and below. But Internet Explorer 7 and 8 support *other* selecors that can be used to the same effect as nth-child. Children of IE is intended to mimic as much nth-child functionality as possible in IE 7 and 8.
 
-Inspired by:
+### Inspired by:
 
 http://abouthalf.com/2011/07/06/poor-mans-nth-child-selector-for-ie-7-and-8/
 
