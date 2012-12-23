@@ -13,14 +13,14 @@ body > div {
 
 // normal nth-child
 .nth {
-  li:nth-child(3), li:nth-child(n+5) {
+  :nth-child(3), :nth-child(n+6) {
     @include highlight;
   }
 }
 
 // works in IE7 and 8
 .nth-ie {
-  li#{nth-child(3)}, li#{nth-child(n+5)} {
+  #{nth-child(3)}, #{nth-child(n+6)} {
     @include highlight;
   }
 }
